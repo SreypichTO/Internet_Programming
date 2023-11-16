@@ -1,5 +1,5 @@
 <template>
-    <div class="Item-Box" :style="{ backgroundColor: bg, borderRadius: bdr, border:bd}">
+    <div class="Item-Box" :style="{ backgroundColor: bg, border:bd}">
       <img class="Image" style="width: 120px;height: 120px;" :src="Img" alt="" />
       <div style="position: absolute; top:120px ;color:#253D4E;font-family: Quicksand;font-size: 16px;">{{ ItemName }}</div>
       <div style="position: absolute;bottom:15px;color:rgba(182, 182, 182, 1);font-family: Lato;font-size: 12px; size: 12px;">{{ Amount }}</div>
