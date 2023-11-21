@@ -1,7 +1,7 @@
 <template>
     <div class="Item-Box" :style="{ backgroundColor: bg, border:bd}">
       <img class="Image" style="width: 120px;height: 120px;" :src="Img" alt="" />
-      <div style="position: absolute; top:120px ;color:#253D4E;font-family: Quicksand;font-size: 16px;">{{ ItemName }}</div>
+      <div style="position: absolute; top:120px ;color:#253D4E;font-family: Quicksand;font-size: 16px;">{{ Name }}</div>
       <div style="position: absolute;bottom:15px;color:rgba(182, 182, 182, 1);font-family: Lato;font-size: 12px; size: 12px;">{{ Amount }}</div>
     </div>
   </template>
@@ -11,7 +11,7 @@
     name: "Category",
     props: {
       Img: String,
-      ItemName: String,
+      Name: String,
       bg: String,
       Amount:String,
       bd:String,
@@ -26,15 +26,12 @@
   
   .Item-Box {
     font-weight: 700;
-    margin-right: 20px;
     position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 137px;
     height: 177px;
-    
-    /* border: 1px solid rgba(129, 177, 61, 1); */
     border-radius: 10px;
     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(39, 39, 39, 0.19);
   }

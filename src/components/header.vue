@@ -31,18 +31,17 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lato:ital,wght@0,300;0,400;1,300&family=Quicksand:wght@300;400;700&display=swap");
 .header{
+    /* width: 1584px; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items:end;
-    padding: 10px;
-    padding-bottom: 60px ;
+    padding-bottom: 50px ;
 }
 .wrap1{
     display: flex;
-    justify-content: space-around;
-    /* background-color: aqua; */
-    width: 45%;
+    justify-content: space-between; /* background-color: aqua; */
+    width: 637px;
     font-size: 16px;
     font-weight: 400;
     font-family: Lato;

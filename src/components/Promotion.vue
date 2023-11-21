@@ -2,13 +2,19 @@
   <div class="banner-box" :style="{ backgroundColor: bannerBg }">
     <div class="text-btn">
       <p class="text">{{ Title }}</p>
-      <Mybutton class="btn" :btnBg="btnColor" btntext="Buy Now"></Mybutton>
+      <Mybutton
+        class="btn"
+        :btnBg="btnColor"
+        btntext="Buy Now"
+        :iconString="icon"
+      ></Mybutton>
     </div>
-    <img class="image " :src="img" alt="" />
+    <img class="image" :src="img" alt="" />
   </div>
 </template>
 
 <script>
+// import { icon } from "@fortawesome/fontawesome-svg-core";
 import Mybutton from "./MyBotton.vue";
 export default {
   name: "Promotion",
@@ -19,9 +25,9 @@ export default {
     bannerBg: String,
     img: String,
     Title: String,
-    btnColor: String
+    btnColor: String,
+    icon: String,
   },
-  
 };
 </script>
 
@@ -37,8 +43,7 @@ export default {
   background-color: rgba(182, 182, 182, 1);
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  /* border: 1px solid #81B13D; */
-  margin-right: 17px;
+   
 }
 .text {
   width: 271px;
@@ -50,7 +55,7 @@ export default {
   font-weight: 700;
   font-size: 24px;
 }
-.text-btn{
+.text-btn {
   display: flex;
   flex-direction: column;
 }
@@ -67,5 +72,4 @@ export default {
   width: 411px;
   height: 181px;
 }
-
 </style>
