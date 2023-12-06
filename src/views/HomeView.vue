@@ -2,12 +2,14 @@
   <!-- <RouterLink>Category</RouterLink> -->
 
     <div class="container">
+      <Head></Head>
       <div class="Hero">
         
         <div style="position: absolute; left: 100px;top: 70px;">
           <div class="text-large">Don’t miss amazing grocery deals</div> <br><br>
           <div class="text-small">Sign up for the daily newsletter </div>
             <br><br><br><br>
+
             <form action="">
               <div>
                 <i class="fa-regular fa-paper-plane"></i>
@@ -24,7 +26,6 @@
         
 
       </div>
-
       <div style="width: 1584px">
         <div>
           <headRow text="Featured Categories"></headRow>
@@ -87,6 +88,7 @@
   import Category from "../components/Category.vue";
   import Promotion from "../components/Promotion.vue";
   import headRow from "../components/header.vue";
+  import Head from "../components/Head.vue";
   import productCard from "../components/productCard.vue";
   import { useProductStore } from "../stores/product";
   
@@ -98,6 +100,7 @@
       Promotion,
       headRow,
       productCard,
+      Head,
     },
   
     computed: {
