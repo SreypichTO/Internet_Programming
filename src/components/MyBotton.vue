@@ -2,13 +2,13 @@
   <!-- to enter the text parameter , we use it in App.vue -->
   <!-- creating button wich we can chenge it's value -->
   <button :style="{backgroundColor: btnBg, color:txtColr}">
-    <p class="text">{{ btntext }}</p>
+    <p class="text" :style="{color: txtColr}">{{ btntext }}</p>
 
     <div style="  margin-left: 10px">
       <!-- binding class -->
       <!-- <i class="uil" :class="icon"></i> -->
       <!-- <i class="fa-solid fa-arrow-right"></i> -->
-      <i class="fa-solid" :class="iconString"></i>
+      <i class="fa-solid" :class="iconString" :style="{color: iconColor}"></i>
  
       <!-- <i :class="{ btnIcon }"></i> -->
     </div>
@@ -24,6 +24,7 @@ export default {
     btntext: String,
     iconString: String,
     txtColr: String,
+    iconColor: String,
   },
 };
 </script>
@@ -46,6 +47,6 @@ button {
 .text {
   font-weight: 600;
   font-size: 12px;
-  /* color: rgba(59, 183, 126, 1); */
+  /* color: white; */
 }
 </style>

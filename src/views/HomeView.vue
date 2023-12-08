@@ -3,29 +3,54 @@
 
     <div class="container">
       <Head></Head>
-      <div class="Hero">
-        
-        <div style="position: absolute; left: 100px;top: 70px;">
-          <div class="text-large">Don’t miss amazing grocery deals</div> <br><br>
-          <div class="text-small">Sign up for the daily newsletter </div>
-            <br><br><br><br>
-
-            <form action="">
-              <div>
-                <i class="fa-regular fa-paper-plane"></i>
-                <input type="text" placeholder="your email address">
-              </div>
-              <div class="subscribe">
-                <div>Subscribe</div>
-              </div>
-            </form>
-          
-        
+      <div class="menuitemRow ">
+        <div style="display: flex;align-items: center;">
+          <button
+            style="
+            width: 250px;   
+            height: 44px;     
+            background-color: #3BB77E; 
+            display: flex;
+            justify-content: space-around;margin-right: 50px;">
+            <div>
+              <img src="../assets/image/4square.svg" alt="">
+            </div>
+              <div
+              style="font-size: 16px;font-weight: 700;font-family: Quicksand;"
+              >Browse All Categories</div>
+              <i class="fa-solid fa-chevron-down" style="color: #fcfcfc;"></i>
+            </button>
+            <div class="menuitem">
+              <menuitem 
+                v-for="j in MenuItem" 
+                :text="j.text" 
+                :iconString="j.iconString"
+                :key="j.id"
+              ></menuitem>
+          </div>
         </div>
-        <img src="../assets/image/fresh-apples .svg" alt="" style="position: absolute; right: 0px;top: 0px;">
-        
+
+        <div class="supportCenter">
+          <div><i class="fa-solid fa-headphones-simple fa-2xl"></i></div>
+          <div>
+              <div 
+              style="
+                  font-size: 24px;
+                  font-family:Quicksand; 
+                  color: #3BB77E;
+                  font-weight: 700;">099 777 888</div> 
+            <div 
+              style="
+                font-size: 12px;
+                font-family:Lato; 
+                color: #253D4E;
+                font-weight: 400;">24/7 Support Center</div>
+          </div>
+        </div>
 
       </div>
+      <showcase></showcase>
+      
       <div style="width: 1584px">
         <div>
           <headRow text="Featured Categories"></headRow>
@@ -89,6 +114,9 @@
   import Promotion from "../components/Promotion.vue";
   import headRow from "../components/header.vue";
   import Head from "../components/Head.vue";
+  import menuitem from "../components/MenuItem.vue";
+  import showcase from "../components/showcase.vue";
+ 
   import productCard from "../components/productCard.vue";
   import { useProductStore } from "../stores/product";
   
@@ -101,12 +129,15 @@
       headRow,
       productCard,
       Head,
+      showcase,
+      menuitem,
     },
   
     computed: {
       ...mapState(useProductStore, ["Category"]),
       ...mapState(useProductStore, ["Promotion"]),
       ...mapState(useProductStore, ["productCard"]),
+      ...mapState(useProductStore, ["MenuItem"]),
     },
   };
   </script>
@@ -146,64 +177,34 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.Hero{
-  width: 1584px;
-  height: 538px;
-  background-color: beige;
-  border-radius: 30px;
-  position: relative;
-  margin-bottom: 50px;
+.menuitem{
+  width: 738px;
+  height: 20px;
+  display: flex;
+  justify-content: space-around;
+  /* background-color: aqua; */
 }
-.text-large{
-    width: 727px;
-    font-family: Quicksand;
-    font-size: 72px;
-    font-weight: 700;
-    line-height: 78px;
-    color: #253D4E;
-}
-.text-small{
-    font-family: Lato;
-    font-size: 30px;
-    font-weight: 400;
-    /* padding-top: 30px; */
-    color: #7E7E7E;
-}
-form{
-  position: relative;
-  width: 442px;
-  height: 50px;
-  background-color: white;
-  border-radius: 30px;
-
+.menuitemRow{
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  width: 1584px;
+  height: 65px;
+  border-top:  #E5E5E5 solid 1px;
+  border-bottom:  #E5E5E5 solid 1px;
+  margin: 10px;
+  padding: 5px;
+  margin-bottom: 30px;
+  /* background-color: palevioletred; */
 }
-input{
-  border: 0px;
-}
-i{
-  color: grey;
-  padding-left: 20px;
-  padding-right: 5pt;
-}
-.subscribe{
-  position: absolute;
-  right: 0px;
-  width: 149px;
-  height: 50px;
-  background-color: #3BB77E;
-  border-radius: 30px;
-
+.supportCenter{
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-family: Quicksand;
-  font-size: 16px;
-  font-weight: 700;
-  color: white;
+  justify-content: space-between;
+  width: 175px;
 }
+
 </style>
 
 

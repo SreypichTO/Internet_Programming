@@ -1,4 +1,5 @@
 // see syntax define store
+import { text } from "@fortawesome/fontawesome-svg-core";
 import { defineStore } from "pinia";
 
 export const useProductStore = defineStore("product", {
@@ -83,6 +84,8 @@ export const useProductStore = defineStore("product", {
         Title: "Everyday Fresh & Clean with Our Products",
         btnColor: "#3BB77E",
         icon: "fa-arrow-right",
+        textcolor: "red",
+        iconColor: "red",
       },
       {
         img: "./src/assets/image/pinkbottle.svg",
@@ -205,5 +208,33 @@ export const useProductStore = defineStore("product", {
         bd: "1px solid rgba(229, 229, 229, 1)",
       },
     ],
+
+    MenuItem:[
+        {
+          text: "Home",
+        },
+        {
+          text: "Food",
+          iconString: "fa-angle-down",
+        },
+        {
+          text: "Vegetables",
+          iconString: "fa-angle-down",
+        },
+        {
+          text: "Drink",
+        },
+        {
+          text: "Cookies",
+        },
+        {
+          text: "Meat & Seafood",
+          iconString: "fa-angle-down",
+        },
+        {
+          text: "Bakery",
+        },
+    ]
+
   }),
 });

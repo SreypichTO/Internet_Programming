@@ -5,8 +5,11 @@
       <Mybutton
         class="btn"
         :btnBg="btnColor"
+        txtColr="white"
         btntext="Buy Now"
+        iconColor="white"
         :iconString="icon"
+       
       ></Mybutton>
     </div>
     <img class="image" :src="img" alt="" />
@@ -27,6 +30,7 @@ export default {
     Title: String,
     btnColor: String,
     icon: String,
+    textcolor: String,
   },
 };
 </script>
