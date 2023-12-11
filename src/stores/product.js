@@ -55,7 +55,7 @@ export const useProductStore = defineStore("product", {
         bd: "#ECFFEC",
       },
       {
-        Img: "./src/assets/image/headphone.svg",
+        Img: "./src/assets/image/orange.svg",
         bg: "#FFFCEB",
         Name: "Headphone",
         Amount: "33 items",

@@ -49,11 +49,14 @@
         </div>
 
       </div>
-      <showcase></showcase>
       
+      <showcase></showcase>
+     
       <div style="width: 1584px">
         <div>
           <headRow text="Featured Categories"></headRow>
+
+          <RouterLink to="/Category">
           <div class="Category">
             <Category
               v-for="i in Category"
@@ -66,6 +69,7 @@
               
             />
           </div>
+        </RouterLink>
         </div>
         <div>
             

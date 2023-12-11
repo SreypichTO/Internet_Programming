@@ -30,16 +30,20 @@
                 <iconText
                     text="Account"
                     iconString="fa-user"
-                ></iconText>
+                ></iconText> 
                 <iconText
                     text="Compare"
-                    iconString="fa-user"
-                ></iconText>
+                    iconString="fa-solid fa-recycle"
+                ></iconText> 
                 <iconText
                     text="WhishList"
-                    iconString="fa-user"
+                    iconString="fa-regular fa-heart"
                 ></iconText>
-            </div>
+                <iconText
+                    text="Cart"
+                    iconString="fa-solid fa-cart-shopping"
+                ></iconText> 
+            </div> 
         </div>
       </div>
 </template>
@@ -79,8 +83,10 @@ import searchbox from './SearchBox.vue';
 .iconText{
     display: flex;
     align-items: center;
-    padding-left: 10px;
-    margin-left: 210px;
+     flex-direction: row;
+      
+    
+    margin-left: 310px;
 }
 
 </style>

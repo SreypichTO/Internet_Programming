@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-// import HomeView from '../views/HomeView.vue'
-import PageCategory from '../views/HomeView.vue'
+import HomeView from '../views/HomeView.vue'
+// import PageCategory from '../views/HomeView.vue'
 
 
 const router = createRouter({
@@ -9,9 +9,18 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: PageCategory,
+      component: HomeView,
     },
-
+    { // Lazy load
+      path: "/category",
+      name: "category",
+      component: () => import('../views/CategoryView.vue'),
+    },
+    // { 
+    //   path: "/products/:productId",
+    //   name: "product",
+    //   component: () => import('../views/ProductView.vue'),
+    // },
   ]
   
 })
