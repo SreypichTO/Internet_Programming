@@ -2,7 +2,7 @@
   <!-- to enter the text parameter , we use it in App.vue -->
   <!-- creating button wich we can chenge it's value -->
   <button :style="{backgroundColor: btnBg, color:txtColr}">
-    <p class="text" :style="{color: txtColr}">{{ btntext }}</p>
+    <p class="text" :style="{color: txtColr,fontSize:fontsize,fontFamily:family,fontWeight:weight}">{{ btntext }}</p>
 
     <div style="  margin-left: 10px">
       <!-- binding class -->
@@ -25,6 +25,9 @@ export default {
     iconString: String,
     txtColr: String,
     iconColor: String,
+    fontsize: String,
+    family: String,
+    weight: String,
   },
 };
 </script>

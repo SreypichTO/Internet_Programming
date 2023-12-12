@@ -1,8 +1,9 @@
 <template>
 
-    <div style="width: 94px;height: 27.67px;display: flex;align-items: center;gap: 10px;margin-left: 10px;">
+    <div style="height: 27.67px;display: flex;align-items: center;gap: 10px;margin-left: 10px;">
         <i class="fa-regular" :class="iconString"></i>
-        <div class="text">{{ text }}</div>
+        <div class="text" :style="{color:textColor, }">{{ text }}</div>
+        <i class="" :class="iconString1"></i>
     </div>
 </template>
 
@@ -12,6 +13,9 @@
         props:{
             text: String,
             iconString: String,
+            iconString1: String,
+            textColor: String,
+            
         }
     }
 </script>
@@ -21,7 +25,7 @@ i{
     width: 12px;
     height: 12px;
     color: #253D4E;
-    margin-left: 10px;
+    /* margin-left: 10px; */
 }
 .text{
     

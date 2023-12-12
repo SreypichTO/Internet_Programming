@@ -206,8 +206,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 175px;
+  width: 190px;
 }
+ 
 
 </style>
 

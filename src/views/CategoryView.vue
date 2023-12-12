@@ -68,7 +68,7 @@
     import menuitem from "../components/MenuItem.vue";
     import { useProductStore } from "../stores/product";
     export default{
-        name: "App",
+        name: "categoryView",
         components: {
             menuitem,
             Head,
@@ -113,7 +113,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 175px;
+  width: 190px;
 }
 .figure{
     width: 1584px;

@@ -234,7 +234,22 @@ export const useProductStore = defineStore("product", {
         {
           text: "Bakery",
         },
-    ]
+    ],
+
+    iconText:[
+        {
+          iconString1:"fa-solid fa-chevron-right",
+          text:"Home",
+        },
+        {
+          iconString1:"fa-solid fa-chevron-right",
+          text:"Vegetables&Tubers",
+        },
+        {
+          text:'Seed of Change Organic',
+          textColor:"#3BB77E",
+        }
+    ],
 
   }),
 });
