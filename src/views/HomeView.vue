@@ -20,14 +20,17 @@
               >Browse All Categories</div>
               <i class="fa-solid fa-chevron-down" style="color: #fcfcfc;"></i>
             </button>
-            <div class="menuitem">
-              <menuitem 
-                v-for="j in MenuItem" 
-                :text="j.text" 
-                :iconString="j.iconString"
-                :key="j.id"
-              ></menuitem>
-          </div>
+            <RouterLink to="/category">
+              <div class="menuitem">
+                <menuitem 
+                  v-for="j in MenuItem" 
+                  :text="j.text" 
+                  :iconString="j.iconString"
+                  :iconString2="j.iconString2"
+                  :key="j.id"
+                ></menuitem>
+            </div>
+            </RouterLink>
         </div>
 
         <div class="supportCenter">
@@ -75,36 +78,40 @@
             
         </div>
         <br /><br />
-        <div class="Promotion">
-          <Promotion
-            v-for="p in Promotion"
-            :bannerBg="p.bannerBg"
-            :img="p.img"
-            :key="p.id"
-            :Title="p.Title"
-            :btnColor="p.btnColor"
-            :icon="p.icon"
-          ></Promotion>
-        </div>
+        <RouterLink to="/products">
+            <div class="Promotion">
+              <Promotion
+                v-for="p in Promotion"
+                :bannerBg="p.bannerBg"
+                :img="p.img"
+                :key="p.id"
+                :Title="p.Title"
+                :btnColor="p.btnColor"
+                :icon="p.icon"
+              ></Promotion>
+          </div>
+        </RouterLink>
          
         <br /><br />
         <headRow text="Popular Products"></headRow>
         <div>
-          <div class="cardRow">
-            <productCard
-              v-for="pc in productCard"
-              :key="pc"
-              :text="pc.text"
-              :labelBg="pc.labelBg"
-              :btntxt="pc.btntxt"
-              :btnColor="pc.btnColor"
-              :color="pc.color"
-              :icon="pc.icon"
-              :cardImg="pc.cardImg"
-              :bd="pc.bd"
-              :box="pc.box"
-            ></productCard>
-          </div>
+          <RouterLink to="/products">
+              <div class="cardRow">
+                <productCard
+                  v-for="pc in productCard"
+                  :key="pc"
+                  :text="pc.text"
+                  :labelBg="pc.labelBg"
+                  :btntxt="pc.btntxt"
+                  :btnColor="pc.btnColor"
+                  :color="pc.color"
+                  :icon="pc.icon"
+                  :cardImg="pc.cardImg"
+                  :bd="pc.bd"
+                  :box="pc.box"
+                ></productCard>
+              </div>
+          </RouterLink>
         </div>
       </div>
     </div>

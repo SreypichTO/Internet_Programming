@@ -20,13 +20,14 @@
                 <i class="fa-solid fa-chevron-down" style="color: #fcfcfc;"></i>
                 </button>
                 <div class="menuitem">
-                <menuitem 
-                    v-for="j in MenuItem" 
-                    :text="j.text" 
-                    :iconString="j.iconString"
-                    :key="j.id"
-                ></menuitem>
-            </div>
+                    <menuitem 
+                        v-for="j in MenuItem" 
+                        :text="j.text" 
+                        :iconString="j.iconString"
+                        :iconString2="j.iconString2"
+                        :key="j.id"
+                    ></menuitem>
+                </div>
             </div>
 
             <div class="supportCenter">
@@ -51,7 +52,7 @@
 
         <div class="figure">
             <div class="text-latge">Coke & Milk</div>
-            <div class="text-small">Home > Category > Coke & Milk</div>
+            <div class="text-small">Home > Category >  Coke & Milk</div>
         </div>
 
 

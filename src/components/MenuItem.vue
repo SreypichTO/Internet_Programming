@@ -1,5 +1,6 @@
 <template>
     <div class="itemRow">
+        <i class="fa-solid" :class="iconString2" style="color: green;margin-right: 5px;"></i>
         <div class="text" >{{ text }}</div>
         <!-- <i class="fa-solid fa-angle-down"></i> -->
         <i class="fa-solid" :class="iconString" ></i>
@@ -13,6 +14,7 @@ export default{
     props:{
         text: String,
         iconString: String,
+        iconString2: String,
     }
 }
 </script>

@@ -212,6 +212,7 @@ export const useProductStore = defineStore("product", {
     MenuItem:[
         {
           text: "Home",
+          iconString2: "fa-solid fa-fire", 
         },
         {
           text: "Food",
