@@ -20,7 +20,7 @@
               >Browse All Categories</div>
               <i class="fa-solid fa-chevron-down" style="color: #fcfcfc;"></i>
             </button>
-            <RouterLink to="/category">
+            <RouterLink to="/category" style="text-decoration: none;">
               <div class="menuitem">
                 <menuitem 
                   v-for="j in MenuItem" 
